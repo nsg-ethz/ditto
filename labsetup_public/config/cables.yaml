@@ -1,0 +1,115 @@
+cables:
+  - source:
+      device: "tofino1"
+      port: "2/-"
+    destination:
+      device: "tofino2"
+      port: "2/-"
+    type: "qsfp"
+
+  - source:
+      device: "tofino3"
+      port: "2/-"
+    destination:
+      device: "tofino1"
+      port: "2/-"
+    type: "qsfp"
+
+  - source:
+      device: "tofino3"
+      port: "3/-"
+    destination:
+      device: "tofino1"
+      port: "3/-"
+    type: "qsfp"
+
+  - source:
+      device: "tofino3"
+      port: "4/-"
+    destination:
+      device: "tofino1"
+      port: "4/-"
+    type: "qsfp"
+
+  - source:
+      device: "tofino3"
+      port: "5/-"
+    destination:
+      device: "tofino1"
+      port: "5/-"
+    type: "qsfp"
+
+  - source:
+      device: "tofino3"
+      port: "6/-"
+    destination:
+      device: "tofino2"
+      port: "3/-"
+    type: "qsfp"
+
+  - source:
+      device: "tofino3"
+      port: "7/-"
+    destination:
+      device: "tofino2"
+      port: "4/-"
+    type: "qsfp"
+
+  - source:
+      device: "tofino3"
+      port: "8/-"
+    destination:
+      device: "tofino2"
+      port: "5/-"
+    type: "qsfp"
+
+
+
+
+  - source:
+      device: "tofino1"
+      port: "27/-"
+    destination:
+      device: "tofino1"
+      port: "28/-"
+    type: "qsfp"
+
+  - source:
+      device: "tofino1"
+      port: "29/-"
+    destination:
+      device: "tofino1"
+      port: "30/-"
+    type: "qsfp"
+
+  - source:
+      device: "tofino1"
+      port: "31/-"
+    destination:
+      device: "tofino1"
+      port: "32/-"
+    type: "qsfp"
+
+  - source:
+      device: "tofino2"
+      port: "27/-"
+    destination:
+      device: "tofino2"
+      port: "28/-"
+    type: "qsfp"
+
+  - source:
+      device: "tofino2"
+      port: "29/-"
+    destination:
+      device: "tofino2"
+      port: "30/-"
+    type: "qsfp"
+
+  - source:
+      device: "tofino2"
+      port: "31/-"
+    destination:
+      device: "tofino2"
+      port: "32/-"
+    type: "qsfp"

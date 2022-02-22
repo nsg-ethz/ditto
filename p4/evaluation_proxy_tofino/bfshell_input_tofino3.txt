@@ -1,0 +1,54 @@
+ucli
+
+pm port-add 1/- 100G NONE
+pm port-enb 1/-
+pm port-add 3/- 100G NONE
+pm port-enb 3/-
+pm port-add 4/- 100G NONE
+pm port-enb 4/-
+pm port-add 5/- 100G NONE
+pm port-enb 5/-
+pm port-add 6/- 100G NONE
+pm port-enb 6/-
+pm port-add 7/- 100G NONE
+pm port-enb 7/-
+pm port-add 8/- 100G NONE
+pm port-enb 8/-
+
+pm rate-period 1
+pm show
+
+exit
+
+pd-evaluation-proxy-tofino
+
+pd fwd_port add_entry forward ig_intr_md_ingress_port 128 action_egress_port 136
+pd fwd_port add_entry forward ig_intr_md_ingress_port 136 action_egress_port 128
+
+pd fwd_srcmac_port add_entry forward ig_intr_md_ingress_port 128 ethernet_srcAddr 0x020000000000 action_egress_port 144
+pd fwd_srcmac_port add_entry forward ig_intr_md_ingress_port 128 ethernet_srcAddr 0x020000000001 action_egress_port 152
+pd fwd_srcmac_port add_entry forward ig_intr_md_ingress_port 128 ethernet_srcAddr 0x020000000002 action_egress_port 160
+pd fwd_srcmac_port add_entry forward ig_intr_md_ingress_port 128 ethernet_srcAddr 0x030000000000 action_egress_port 168
+pd fwd_srcmac_port add_entry forward ig_intr_md_ingress_port 128 ethernet_srcAddr 0x030000000001 action_egress_port 176
+pd fwd_srcmac_port add_entry forward ig_intr_md_ingress_port 128 ethernet_srcAddr 0x030000000002 action_egress_port 184
+
+pd fwd_port add_entry forward ig_intr_md_ingress_port 144 action_egress_port 144 
+pd fwd_port add_entry forward ig_intr_md_ingress_port 152 action_egress_port 152 
+pd fwd_port add_entry forward ig_intr_md_ingress_port 160 action_egress_port 160 
+pd fwd_port add_entry forward ig_intr_md_ingress_port 168 action_egress_port 168 
+pd fwd_port add_entry forward ig_intr_md_ingress_port 176 action_egress_port 176 
+pd fwd_port add_entry forward ig_intr_md_ingress_port 184 action_egress_port 184 
+
+pd clone_port add_entry clone_to_port ig_intr_md_ingress_port 144 action_session_id 144
+pd clone_port add_entry clone_to_port ig_intr_md_ingress_port 152 action_session_id 152
+pd clone_port add_entry clone_to_port ig_intr_md_ingress_port 160 action_session_id 160
+pd clone_port add_entry clone_to_port ig_intr_md_ingress_port 168 action_session_id 168
+pd clone_port add_entry clone_to_port ig_intr_md_ingress_port 176 action_session_id 176
+pd clone_port add_entry clone_to_port ig_intr_md_ingress_port 184 action_session_id 184
+
+end
+
+ucli
+
+pm show
+
